@@ -87,3 +87,133 @@ for (let i=0 ; i<30 ; i++){
 console.log ( "The numbers was: " + newArray);
 console.log("EVEN numbers : " + evens + " ODD numbers : " + odds);
 
+console.log("--------------------------------------------------------------------------------------------------------------------------------");
+
+let typo = "Csincsill"
+
+function addString(string) {
+return string + "a";
+    
+}
+
+console.log (addString("kutyafasz"));
+
+console.log("--------------------------------------------------------------------------------------------------------------------------------");
+
+let basNum = 123;
+
+function doubler(int){
+    return int * 2;
+}
+
+let doubledNumber = doubler(basNum);
+
+console.log(" A végeredmény: " + doubledNumber);
+console.log("--------------------------------------------------------------------------------------------------------------------------------");
+
+
+
+function factorial(int){
+    let actualNumber = 1;
+   let  newNumber = 0;
+for (let i= 0 ; i<int ; i++ ){
+  newNumber =  actualNumber * ( i +1 ) ;
+  actualNumber = newNumber;
+
+}
+return BigInt(actualNumber);
+
+}
+let superNumber = factorial(24);
+console.log(superNumber);
+
+
+console.log("--------------------------------------------------------------------------------------------------------------------------------");
+
+ let al = "GreenFox";
+
+ function greet (name = "to You"){
+
+ return "Greetings " + name + "!";
+ }
+
+ console.log(greet());
+
+ console.log("--------------------------------------------------------------------------------------------------------------------------------");
+
+ function printing(...param ){
+
+    return param; 
+
+ }
+
+
+console.log (printing(12, 34, 33, 54, 32));
+console.log (...printing(12, 34, 33, 54, 32));
+
+console.log("--------------------------------------------------------------------------------------------------------------------------------");
+
+function sumAll(number){
+    let numberOne = 0;
+   let  numberTwo = 0;
+for (let i= 0 ; i<number ; i++ ){
+  numberTwo =  numberOne + ( i +1 ) ;
+  numberOne = numberTwo;
+
+}
+return numberOne;
+
+
+}
+let summed = sumAll(8)
+console.log(summed);
+
+console.log("--------------------------------------------------------------------------------------------------------------------------------");
+
+
+
+// Anagramma
+// Mi a fene az az anagramma?
+// Az anagramma a szójátékok egy fajtája, melyben értelmes szavak vagy mondatok betűinek sorrendjét úgy változtatjuk meg,
+ // hogy az eredmény szintén értelmes szó vagy mondat legyen. (több információért nézd meg az anagramma oldalt Wikipédián)
+
+// Gyakorlat
+// Készíts egy isAnagram nevű függvényt, kövesd az eddig használt nyelvi stílus útmutatót. 
+// A függvények bemeneten fogadnia a kell két stringet és visszaadni egy logikai (boolean) értéket attól függően, 
+// hogy a két string egymás anagrammája vagy sem.
+
+// Példák
+// bemenet 1	bemenet 2	kimenet
+// "dog"	"god"	true
+// "green"	"fox"	false
+
+const isAnagram = (str1, str2) => {
+    const normalize = str =>
+      str
+        .toLowerCase()
+        .replace(/[^a-z0-9]/gi, '')
+        .split('')
+        .sort()
+        .join('');
+
+    return normalize(str1) === normalize(str2);
+  };
+
+  console.log("--------------------------------------------------------------------------------------------------------------");
+
+  console.log (isAnagram( 'stup' , 'pust'));
+  console.log (isAnagram( 'kaki' , 'kika'));
+
+  let almaString = "alma"
+  let str1 = "kedvenc gyümölcsöm az alma";
+  let str2 = str1.split(" ");
+
+  let pos = str2.indexOf(almaString);
+
+  let wordToChange = str2[pos]
+
+
+  console.log(wordToChange);
+
+
+
