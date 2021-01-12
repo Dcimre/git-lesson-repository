@@ -1,4 +1,4 @@
-import { Thing } from './thing.hu.js';
+import { Thing } from './thing.js';
 
 class Fleet {
 
