@@ -7,6 +7,6 @@ export class Pokemon {
     }
   
     isEffectiveAgainst(pokemon) {
-      return this.effectiveAgainst === pokemon.type;
+      return this.effectiveAgainst === pokemon.type; 
     }
   }

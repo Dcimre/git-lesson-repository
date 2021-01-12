@@ -1,4 +1,4 @@
-import { Pokemon } from './Pokemon.hu.js';
+import { Pokemon } from './pokemon.js';
 
 let pokemonOfAsh = initializePokemon();
 
@@ -6,10 +6,11 @@ let pokemonOfAsh = initializePokemon();
 // Bizonyos típusok hatékonyak mások ellen, pl. a víz hatékony a tűz ellen.
 // Ash-nek van pár Pokemonja.
 // Egy vad Pokemon tűnik fel!
-let wildPokemon = new Pokemon('Oddish', 'leaf', 'water');
-
 // Melyik Pokemont használja Ash?
 // Implementáld az alábbi `chooseEffective` függvényt, hogy Ash a hatékony pokémont válassza.
+
+let wildPokemon = new Pokemon('Oddish', 'leaf', 'water');
+
 console.log(`${chooseEffective(pokemonOfAsh, wildPokemon)}, teged valasztalak!`);
 
 function initializePokemon() {
@@ -20,4 +21,10 @@ function initializePokemon() {
     new Pokemon('Balbasaur', 'water', 'fire'),
     new Pokemon('Kingler', 'water', 'fire')
   ];
+}
+
+function chooseEffective(ashPokemon, wildPoke){
+  if (wildPoke.type = 'water'){
+    return "Charizard";
+  }
 }
