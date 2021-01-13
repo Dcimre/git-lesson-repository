@@ -13,12 +13,14 @@ class Thing {
     }
   
     getCompleted() {
-      return this.completed;
+       return this.completed;
     }
   
     toString() {
+
       return `[${this.completed ? 'x' : ' '}] ${this.name}`;
     }
   }
   
   export { Thing };
+

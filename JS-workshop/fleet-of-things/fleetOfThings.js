@@ -12,23 +12,43 @@ let fleet = new Fleet();
 // 3. [x] Stand up
 // 4. [x] Eat lunch
 
- const getMilk = new Thing("Get milk");
- const remove = new Thing("Remove the obstacle");
- const stand = new Thing("Stand up");
- const eat = new Thing("Eat lunch");
+// Functionnel hozom létre az új feladatokat (newToDo)
+
+function newToDo(name){
+    return new Thing (name)
+}
+
+ let getMilk = newToDo ("Get milk");
+ let remove = newToDo ("Remove the obstacle");
+ let stand = newToDo ("Stand up");
+ let  eat = newToDo ("Eat launch");
+
+
+// Új "dolgok" létrehozása constructor methoddal.
+
+
+/* const getMilk = new Thing ("Get milk");
+ const remove = new Thing ("Remove the obstacle");
+ const stand = new Thing ("Stand up");
+ const eat = new Thing ("Eat lunch");
+
+ */
 
  const myThings = new Fleet;
 
  myThings.add(getMilk);
  myThings.add(remove);
  myThings.add(stand);
- myThings.add(eat)
+ myThings.add(eat);
 
  stand.complete();
- stand.toString();
+ //stand.toString();
  eat.complete();
- eat.toString();
+ //eat.toString();
  fleet.getThings();
 
 
 console.log(myThings.toString());
+
+
+// (tostring - bele a complete methodba!
