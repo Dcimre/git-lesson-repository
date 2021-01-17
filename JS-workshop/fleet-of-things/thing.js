@@ -6,6 +6,8 @@ class Thing {
   
     complete() {
       this.completed = true;
+      return `[${this.completed ? 'x' : ' '}] ${this.name}`;
+
     }
   
     getName() {
@@ -18,7 +20,6 @@ class Thing {
   
     toString() {
 
-      return `[${this.completed ? 'x' : ' '}] ${this.name}`;
     }
   }
   

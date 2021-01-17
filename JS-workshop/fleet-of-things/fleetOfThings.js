@@ -51,4 +51,7 @@ function newToDo(name){
 console.log(myThings.toString());
 
 
-// (tostring - bele a complete methodba!
+// IMPROVE:
+
+// tostring - bele a complete methodba! - ready. 
+// külön function új dolgok létrehozására - ready

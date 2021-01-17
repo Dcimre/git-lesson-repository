@@ -1,6 +1,6 @@
 import test from 'tape';
 
-import { Counter } from './counter';
+import { Counter } from './counter.js';
 
 test('init with 0 and add 5 is 5', t => {
   const c = new Counter();

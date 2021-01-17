@@ -25,6 +25,6 @@ function initializePokemon() {
 
 function chooseEffective(ashPokemon, wildPoke){
   if (wildPoke.type = 'water'){
-    return "Charizard";
+    return "Charizard"; 
   }
 }

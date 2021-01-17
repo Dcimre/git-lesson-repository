@@ -1,0 +1,17 @@
+{
+  "type": "module",
+  "name": "CounterApp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "counter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/tape": "^4.13.0",
+    "tape": "^5.1.1"
+  }
+}
