@@ -1,0 +1,13 @@
+{
+  "type": "module",
+  "name": "Pirates",
+  "version": "1.0.0",
+  "description": "Feladatok\r Kalózok\r Készíts egy Pirate osztályt. Bármilyen tagváltozót vagy metódust hozzáadhatsz az osztályhoz, de a következő metódusokat definiálnod kell:",
+  "main": "Pirate.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

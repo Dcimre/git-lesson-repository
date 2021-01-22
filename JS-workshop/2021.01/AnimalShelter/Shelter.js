@@ -1,6 +1,4 @@
 
-
-
 class Shelter{
 
     budget = 50
@@ -20,6 +18,7 @@ class Shelter{
 
     heal(){
        let sickArray = this.animals.filter(this.checkHealth);
+       
        sickArray[0].isHealthy = true;
     }
 
@@ -28,13 +27,13 @@ class Shelter{
     }
 
     findNewOwner(){
-    randomAnimal = this.animals[Math.floor(Math.random() * this.animals.length)];
+        
+    let randomAnimal = this.animals[Math.floor(Math.random() * this.animals.length)];
 
-            this.animals.slice(randomAnimal,randomAnimal);
+    let randomOwner = this.adopters[Math.floor(Math.random() * this.adopters.length)];
 
-    randomOwner = this.adopters[Math.floor(Math.random() * this.adopters.length)];
-
-            this.adopters.slice(randomOwner,randomOwner);
+            this.adopters.splice(randomOwner,1);
+            this.animals.splice(randomAnimal,1);
 
     }
 

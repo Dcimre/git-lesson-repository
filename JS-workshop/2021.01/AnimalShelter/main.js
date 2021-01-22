@@ -40,9 +40,19 @@ noe.rescue(gyurika);
 noe.rescue(sziaMiau);
 
 gyurika.setToSick();
-noe.heal();
+ noe.heal();
 console.log(gyurika);
+noe.addAdopter("Sanyi Bá");
+noe.addAdopter("Béla Bá");
+noe.addAdopter("Bözse Mama");
+noe.addAdopter("Feri Bácsi");
+noe.addAdopter("JóskaPista Bácsi");
 
+console.log(noe.adopters);
+
+noe.findNewOwner();
+
+console.log(noe.adopters);
 
 
 

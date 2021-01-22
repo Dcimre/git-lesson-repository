@@ -9,6 +9,8 @@ különben: "♫ Nyaaar van es semmi baaj, ... ♪", a kalóz kidől, és kialus
 Ha idáig eljutottál, megpróbálhatod a következőt.
 
 die() - ez megöli a kalózt. Ez esetben, DrinkSomeRum, stb. meghívása csak azzal a szöveggel tér vissza, hogy A kaloz halott..
+
+
 brawl(otherPirate) - a kalóz megküzd egy másik kalózzal (ha a másik életben van) és 1/3 az esélye, hogy az egyik meghal, a másik meghal vagy mindketten kidőlnek.
 És... ha már idáig eljutottál...
 
