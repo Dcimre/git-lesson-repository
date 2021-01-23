@@ -3,11 +3,9 @@ class Pirate{
     drunkness = 0;
     tiredness = 0;
     isAlive = true;
-    
-
 
     constructor(name, age,title){
-        this.name=name;
+        this.name = name;
         this.age = age;
         this.title = title;
     }
@@ -25,18 +23,18 @@ class Pirate{
 
     howIsGoingMate(){
 
-        if(this.alive == true && this.drunkness <=4){
+        if(this.isAlive == true && this.drunkness <= 4){
 
                 console.log("Meg egy korsoval!");
         }
-        else if (this.alive == true && this.drunkness > 4) {
+        else if (this.isAlive == true && this.drunkness > 4) {
             console.log("♫ Nyaaar van es semmi baaj, ... ♪");
             this.sleep();
-            console.log("need some sleep zZzzzzZzzZZZzzZZz...");
+           
         }
     
-        else if (this.alive == false){
-            console.log( this.deadMessage());
+        else if (this.isAlive == false){
+            this.deadMessage();
     }
 
     }
@@ -44,6 +42,7 @@ class Pirate{
     sleep(){
         this.tiredness = 0;
         this.drunkness = 0;
+        console.log("need some sleep zZzzzzZzzZZZzzZZz...");
     }
     die(){
         this.isAlive = false;
@@ -51,6 +50,38 @@ class Pirate{
     deadMessage(){
         console.log("Sailor is dead!")
     }
+
+    brawl(otherPirate){
+
+        var d = Math.floor(Math.random() * 10) + 1;
+        console.log(d);
+
+if (d <= 3 && otherPirate.isAlive){
+    otherPirate.die();
+    console.log(`${this.name} won the brawl! `)
+    
+}
+    
+else if (d < 7 && d > 3 && otherPirate.isAlive){
+    this.die();
+    console.log(`${otherPirate.name} won the brawl!`)
+    
+
+}
+   
+else if (d >= 7 && otherPirate.isAlive){
+
+    otherPirate.die();
+   this.die();
+    console.log('Both two pirates are dead!')
+    
+    }
+
+    else{ 
+        console.log ("somebody already dead, cant fight")
+    }
+
+}
 
 }
 
