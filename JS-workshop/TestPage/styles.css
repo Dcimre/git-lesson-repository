@@ -1,0 +1,80 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Potta One', cursive;
+}
+
+html, body{
+    margin: auto;
+    background-color:black;
+}
+
+.main-header{
+    display:flex;
+    background-image: url('Images/mexican-header.jpg');
+    background-size: cover;
+    max-height: 300px;
+    justify-items: flex-start
+}
+
+.top-title{
+    font-size: 60px;
+    color: wheat;
+    text-align: center;
+}
+
+.main-menu{
+    margin:auto;
+    padding:5px;
+    display: flex;
+    justify-content: space-between;
+    max-height: 100%;
+    flex-wrap:wrap;
+    flex-grow: 4;
+}
+
+.menu-button_gallery{
+    display: block;
+    position: relative;
+    border: 2px solid wheat;
+    background-image: url('./Images/resizedTrue1.png');
+    background-size: cover;
+    height: 650px;
+    width: 450px;  
+}
+
+.menu-button_menu{
+    border: 2px solid wheat;
+    background-image: url('./Images/resized3.jpg');
+    background-size: cover;
+    height: 650px;
+    width: 450px;
+}
+
+.menu-button_about{
+    border: 2px solid wheat;
+    background-image: url('./Images/resized2.jpg');
+    background-size: cover;
+    height: 650px;
+    width: 450px;
+}
+
+.menu{
+    display:inline;
+    position: relative;
+    top:2px;
+    
+    color: wheat;  
+
+}
+
+.gallery{
+    color: wheat;
+}
+
+.about{
+    color: wheat;
+}
+
+.footer{
+    background-color:wheat;
+}

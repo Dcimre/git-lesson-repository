@@ -1,0 +1,22 @@
+html {
+  color: #3DDEE3;
+}
+
+nav a {
+  color: #289CFA;
+  text-decoration: none;
+}
+nav a:hover {
+  background-color: black;
+  color: #c3f5f6;
+  background-color: #3DDEE3;
+}
+nav.secondary {
+  color: #454DFA;
+}
+
+nav.secondary {
+  color: #DE7B54;
+}
+
+/*# sourceMappingURL=style.css.map */

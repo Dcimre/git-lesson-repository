@@ -1,0 +1,6 @@
+@mixin setBackground($color){
+
+   background-color: darken($color, 70%);
+   color: lighten($color, 30%);
+
+}

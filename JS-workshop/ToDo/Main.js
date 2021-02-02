@@ -1,9 +1,8 @@
 'use strict';
 
-import Task from './Task.js';
+//import Task from './Task.js';
 import ToDos from './Todos.js';
 import {utility} from './Utilities.js';
-
 import promptSync from 'prompt-sync';
 
 const prompt = promptSync();
@@ -71,6 +70,7 @@ else if (command == "exit"){
     
     console.log('\n');
     console.log( "EXIT TO-Do-LIST! HAVE A NICE DAY!")
+    console.log('\n');
     utility.saveJson('todos.json', listOfTodos.todos);
     return;
 }
@@ -84,30 +84,6 @@ else{
 
 }
 
-// CHECK: undefined a lista végén? , else ág furcsán viselkedik. // 
+// CHECK: undefined a lista végén? //
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-console.log('\n');
-console.log(' there is more code to run');

@@ -238,6 +238,3 @@ console.log(evilTeacher instanceof EvilTeacher);
 
 
 
-
-
-

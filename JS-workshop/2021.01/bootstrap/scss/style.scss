@@ -1,0 +1,32 @@
+@import 'color';
+@import 'mixins';
+
+
+html{
+    color: $secondary-color;
+}
+
+
+nav{
+    a {
+        color: $primary-color;
+        text-decoration: none;
+
+    &:hover{
+        @include setBackground($secondary-color);
+        background-color: $secondary-color;
+
+        }
+
+       
+    }
+    &.secondary{
+        color: $fourth-color;
+    }
+
+}
+
+nav.secondary{
+
+    color:$third-color;
+}

@@ -1,7 +1,6 @@
 'use strict';
 
 import Task from './Task.js';
-import {utility} from './Utilities.js';
 
 import promptSync from 'prompt-sync';
 
@@ -29,7 +28,7 @@ export default class ToDos{
 
     deleteTodo(){
 
-        const whatToDelete = prompt ( 'please write the task you want to delete :   ');
+        const whatToDelete = prompt ( 'please write the task you want to delete  :   ');
 
         for( let i = 0; i < this.todos.length; i++){ 
     
@@ -49,7 +48,7 @@ export default class ToDos{
 
     done(){
         console.log('\n');
-        const whatIsDone = prompt ( 'please write the name of your task that you want to check "ready" ');
+        const whatIsDone = prompt ( 'please write the name of your task that you want to check "ready"  :    ');
 
         for( let i = 0; i < this.todos.length; i++){ 
     

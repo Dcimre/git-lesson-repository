@@ -16,9 +16,9 @@ let  utility = {
         }
     },
 
-    saveJson(path,data){
+    saveJson(path,dataToSave){
 
-        return fs.writeFileSync(path , JSON.stringify (data) );
+        return fs.writeFileSync(path , JSON.stringify (dataToSave) );
     
     },
 
