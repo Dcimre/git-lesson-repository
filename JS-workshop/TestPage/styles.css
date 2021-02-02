@@ -33,6 +33,7 @@ html, body{
 }
 
 .menu-button_gallery{
+    transition: transform .2s;
     border: 2px solid wheat;
     background-image: url('./Images/resizedTrue1.png');
     background-size: cover;
@@ -41,22 +42,31 @@ html, body{
     font-size: 30px;
     color: wheat;  
     text-align:center;
-    vertical-align: top; 
 }
+.menu-button_gallery:hover {
+    transform: scale(1.05);
+  }
 
 .menu-button_menu{
+    transition: transform .2s;
     border: 2px solid wheat;
     background-image: url('./Images/resized3.jpg');
     background-size: cover;
-    height: 650px;
-    width: 450px;
+    min-width: 200px;
+    min-width: 150px;
+    max-height: 650px;
+    max-width: 450px;
     font-size: 30px;
     color: wheat;  
     text-align:center;
-    vertical-align: top;
+
 }
+.menu-button_menu:hover {
+    transform: scale(1.05);
+  }
 
 .menu-button_about{
+    transition: transform .2s;
     border: 2px solid wheat;
     background-image: url('./Images/resized2.jpg');
     background-size: cover;
@@ -65,25 +75,14 @@ html, body{
     font-size: 30px;
     color: wheat;  
     text-align:center;
-    vertical-align: top; 
-}
-
-.menu{
-    font-size: 30px;
-    color: wheat;  
-    text-align:center;
-    vertical-align: top;
 
 }
+.menu-button_about:hover {
+    transform: scale(1.05);
+  }
 
-.gallery{
-    font-size: 30px;
-    color: wheat;
-}
-
-.about{
-    font-size: 30px;
-    color: wheat;
+.menu-text{
+    
 }
 
 .footer{
