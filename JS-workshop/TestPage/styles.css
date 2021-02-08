@@ -13,7 +13,7 @@ html, body{
     background-image: url('Images/mexican-header.jpg');
     background-size: cover;
     max-height: 300px;
-    justify-items: flex-start
+    flex-wrap: wrap;
 }
 
 .top-title{
@@ -22,70 +22,93 @@ html, body{
     text-align: center;
 }
 
+
 .main-menu{
     margin:auto;
     padding:5px;
-    display: flex;
+    display:flex;
     justify-content: space-between;
-    max-height: 100%;
-    flex-wrap:wrap;
-    flex-grow: 4;
+    flex-wrap:nowrap;
+
 }
 
-.menu-button_gallery{
-    transition: transform .2s;
+.menu-button{
+    display:flex;
+    flex-wrap: nowrap;
+    padding:2px;
+    margin:2px;
+    justify-content:center;
     border: 2px solid wheat;
-    background-image: url('./Images/resizedTrue1.png');
-    background-size: cover;
+
     height: 650px;
     width: 450px; 
     font-size: 30px;
-    color: wheat;  
-    text-align:center;
+    color: rgb(112, 92, 54);  
+    
+   
+    flex-shrink: 2;
+    transition: transform .2s;
 }
-.menu-button_gallery:hover {
+
+.menu-button:hover {
     transform: scale(1.05);
   }
 
-.menu-button_menu{
-    transition: transform .2s;
-    border: 2px solid wheat;
-    background-image: url('./Images/resized3.jpg');
+  .menu-button.menu-gallery{
+    background-image: url('./Images/resizedTrue1.png');
     background-size: cover;
-    min-width: 200px;
-    min-width: 150px;
-    max-height: 650px;
-    max-width: 450px;
-    font-size: 30px;
-    color: wheat;  
     text-align:center;
-
-}
-.menu-button_menu:hover {
-    transform: scale(1.05);
+    vertical-align: top;
   }
-
-.menu-button_about{
-    transition: transform .2s;
-    border: 2px solid wheat;
+  .menu-button.menu-aboutus{
     background-image: url('./Images/resized2.jpg');
     background-size: cover;
-    height: 650px;
-    width: 450px;
-    font-size: 30px;
-    color: wheat;  
     text-align:center;
-
-}
-.menu-button_about:hover {
-    transform: scale(1.05);
+    vertical-align: top;
   }
-
-.menu-text{
-    
-}
+  .menu-button.menu-themenu{
+    background-image: url('./Images/resized3.jpg');
+    background-size: cover;
+    text-align:center;
+    vertical-align: top;
+  }
 
 .footer{
     
+    
     background-color:wheat;
+}
+
+.modal-bg-aboutus{
+    position:fixed;
+    width:100%;
+    height:100vh;
+    top: 0;
+    left:0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s opacity 0,05s;
+
+
+}
+
+.bg-active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-aboutus{
+    background-color: white;
+    width: 90%;
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
 }
