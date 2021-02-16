@@ -1,16 +1,23 @@
 'use strict';
 
-// Hozzájutni a rajz contexthez
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+import game from './game.js';
+ import map from './map.js;'
+
+
+
+
+
+
+// Hozzájutni a rajz contexthez: 
+
+game.setupCanvas();
+
 
 // Ez a függvény azután fut le, hogy a képek betöltöttek
-window.onload = () => {
-  // Kirajzolni egy padló csempét
-  const image = document.getElementById('floor');
-  ctx.drawImage(image, 50, 50);
 
-};
+window.onload = game.newLevel();
+
+  
 
 /* Csak ki kell cserélned a paraméter string-et a document.getElementById('floor')-ban
  *

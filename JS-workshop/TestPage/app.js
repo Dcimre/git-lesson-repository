@@ -1,7 +1,12 @@
-let modalBtn = document.getElementsByClassName('menu-button menu-aboutus');
+let modalBtn = document.getElementsByClassName('menu-button menu-aboutus')[0];
+let modalClose = document.getElementsByClassName('closeMe')[0];
 
 let modalBg = document.querySelector('.modal-bg-aboutus');
 
-modalBtn.onclick = function changeClass() {
-    modalBg.classList.add('bg-active');
+modalBtn.onclick = function activeModal() {
+    modalBg.classList.add("bg-active");
+}; 
+
+ modalClose.onclick = function hiddenModal() {
+    modalBg.classList.remove("bg-active");
 };  
