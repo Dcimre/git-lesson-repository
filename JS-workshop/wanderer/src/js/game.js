@@ -2,8 +2,7 @@
 
  let game = {
 
-    floor : document.getElementById('floor'),
-    hero : document.getElementById('hero-down'),
+    
 
     tileSize : 72,
     numTiles : 10,
@@ -42,6 +41,8 @@ for   (let i=0; i<10; i++){
 }
 
 }
+
+export default game;
 
 
 

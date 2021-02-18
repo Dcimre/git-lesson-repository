@@ -74,15 +74,15 @@ kövesd az alapelveket, és mutasd meg a munkádat egy mentornak áttekintésre
 - Hero(hős):
   - HP: 20 + 3 \* d6
   - DP: 2 \* d6
-  - SP: 5 + d6
+  - AP: 5 + d6
 - Monster (szörny) Szint (level) X:
   - HP: 2 \* X \* d6
   - DP: X/2 \* d6
-  - SP: X \* d6
+  - AP: X \* d6
 - Boss(boss) Szint (level) X:
   - HP: 2 \* X \* d6 + d6
   - DP: X/2 \* d6 + d6 / 2
-  - SP: X \* d6 + X
+  - AP: X \* d6 + X
 
 #### Harc
 
