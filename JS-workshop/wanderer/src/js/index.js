@@ -11,55 +11,36 @@ const hero_right = document.getElementById('hero-right');
 const skeleton   = document.getElementById('skeleton');
 const boss       = document.getElementById('boss');
 
-
-
-let game = {
-
-  newLevel(){
-    
-
-  let coordinX = 0;
-  let coordinY = 0;
-
-  for   (let i=0; i<10; i++){
- 
-     for (let j=0; j<10; j++){
-     ctx.drawImage(floor, coordinX, coordinY);
-     coordinX +=72;
-      };
-
-      coordinY +=72;
-      coordinX = 0;
-    };
-  }
-}
-
 let map = {
 
   cols: 10,
   rows: 10,
   tsize: 72,
   tiles: [
-    1,0,0,1,0,0,0,0,0,0,
-    1,1,0,1,0,0,0,0,1,1,
-    0,1,1,1,1,0,0,0,1,0,
-    0,0,0,0,1,1,0,0,1,0,
-    0,0,0,0,0,1,0,0,1,0,
-    1,1,1,1,1,1,0,1,1,1,
-    0,0,0,1,0,0,0,1,0,0,
-    0,0,0,1,1,1,1,1,0,0,
-    0,0,0,0,1,0,0,0,0,0,
-    0,0,0,0,1,1,0,0,0,0,
+    [1,1,1,1,1,1,1,1,1,1],
+    [1,0,0,1,0,0,0,0,0,1],
+    [1,1,1,1,1,0,0,0,0,1],
+    [1,0,0,0,1,1,0,0,0,1],
+    [1,0,0,0,0,1,0,0,0,1],
+    [1,1,1,1,1,1,0,1,1,1],
+    [0,0,0,1,0,0,0,1,0,1],
+    [1,1,1,1,1,1,1,1,0,1],
+    [1,0,0,0,1,0,0,0,0,1],
+    [1,1,1,1,1,1,1,1,1,1],
   ],
 
   getTile: function(col, row) {
-    return this.tiles[row * map.cols + col]
+    return this.tiles[row] [col];
   },
 
   generateMap: function(){
+
     for (var c = 0; c < map.cols; c++) {
+
       for (var r = 0; r < map.rows; r++) {
+
         var tile = map.getTile(c, r);
+        
         if (tile == 0) { 
           ctx.drawImage(
 
@@ -82,15 +63,8 @@ let map = {
     return;
   },
 
-  newPlayer: function(){
-    const Hero = new Character(
-      20 + (3*utility.d6()), // HP
-      2  * (utility.d6()),  //  AP
-      5  + (utility.d6()), //   DP
-      1,
-    )
-    Hero.currentX = 0;
-    Hero.currentY = 0;
+  setPlayer: function(){
+    
     ctx.drawImage(hero_down, 0, 0);
   },
 };
@@ -109,6 +83,7 @@ class Character {
 
   currentX;
   currentY;
+  
 
   lvl;
 
@@ -127,19 +102,33 @@ class Character {
   };
   
   moveLeft(char){
+    
+    if (map.tiles [(this.currentX-72)  / 72] [this.currentY / 72] == 1){
     ctx.drawImage(char , this.currentX - 72 , this.currentY);
+    this.currentX -=72;
+    ctx.drawImage(floor,this.currentX +72,this.currentY );
+    }
+    else {
+      ctx.drawImage(char, this.currentX,this.currentY);
+    }
 
   };
   moveRight(char){
     ctx.drawImage(char , this.currentX + 72 , this.currentY);
+    this.currentX+=72;
+    ctx.drawImage(floor,this.currentX -72,this.currentY );
 
   };
   moveUp(char){
-    ctx.drawImage(char , this.currentX , this.currentY + 72);
+    ctx.drawImage(char , this.currentX , this.currentY - 72);
+    this.currentY-=72;
+    ctx.drawImage(floor,this.currentX, this.currentY +72 );
 
   };
   moveDown(char){
-    ctx.drawImage(char , this.currentX , this.currentY - 72);
+    ctx.drawImage(char , this.currentX , this.currentY + 72);
+    this.currentY+=72;
+    ctx.drawImage(floor , this.currentX , this.currentY - 72);
 
   };
   attack(){
@@ -156,11 +145,34 @@ class Character {
 
 }
 
+/* function newHero(){
+  const Hero = new Character(
+    20 + (3*utility.d6()), // HP
+    2  * (utility.d6()),  //  AP
+    5  + (utility.d6()), //   DP
+    1,
+  )
+  Hero.currentX = 0;
+  Hero.currentY = 0;
+}
+*/
+
 
 // ONLOAD: 
 
- //window.onload = map.generateMap(), 
-map.newPlayer();
+window.onload = () => {
+  map.generateMap();
+  map.setPlayer();
+};
+const Hero = new Character(
+  20 + (3*utility.d6()), // HP
+  2  * (utility.d6()),  //  AP
+  5  + (utility.d6()), //   DP
+  1,
+)
+Hero.currentX = 0;
+Hero.currentY = 0;
+
 
 
 
